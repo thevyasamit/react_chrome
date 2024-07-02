@@ -1,1 +1,1 @@
-Adding description
+This is the readme for react project.
