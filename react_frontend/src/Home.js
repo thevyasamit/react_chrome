@@ -4,9 +4,10 @@ function Home() {
     return (
       <section>
         <h1>Amazing scientists</h1>
-        <Profile />
-        <Profile />
-        <Profile />
+        <ul>
+          <li> <Profile /> </li>
+        </ul>
+        
       </section>
     );
   }

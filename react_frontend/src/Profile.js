@@ -1,16 +1,14 @@
 export default function Profile() {
+    const person = {
+        name : 'Some Scientist',
+        theme : {
+            backgroundColor:'yellow'
+        }
+    };
     return (
-        <div>
-            <h1>Profile Heading</h1>
-            <img src="https://i.imgur.com/MK3eW3As.jpg" />
-            <ul>
-                <li>
-                    First point.
-                </li>
-                <li>
-                    Second Point.
-                </li>
-            </ul>
+        <div className="avatar" style={person.theme}>
+            <h1>{person.name}</h1>
+            <img src="https://i.imgur.com/MK3eW3As.jpg"/>
         </div>
     );
 }
