@@ -15,11 +15,12 @@ export default function Profile() {
         theme : {
             background:'cyan',
             color:'black',
-            padding: '0px 10px 10px'
+            padding: '0px 10px 10px', 
+            width: '32rem'
         }
     };
     return (
-    <>
+    <div style={{display: 'flex', flexDirection:'column', alignItems:'center', gap:'1rem'}}>
         {contacts.map(contact => (
             <div className='contacts'style={theme.theme}>
                 <h1 key={contact.id}> {contact.name}'s Info:</h1>
@@ -29,6 +30,6 @@ export default function Profile() {
                 </ul>
             </div>
         ))}
-    </>    
+    </div>    
     );
 }
