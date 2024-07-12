@@ -7,9 +7,22 @@ export default function Profile() {
 
     useEffect(() => {
         axios.get('http://localhost:8000/api/contact/')
-            .then(response => setContacts(response.data))
+            .then(response => {
+                setContacts(response.data)
+                
+            }
+        
+        
+        
+        )
             .catch(error => console.log(error));
+
+            console.log("uahdbjziuhsf")
     }, []);
+
+    useEffect(() => {
+        console.log("contcs changed")
+    },[contacts])
     console.log(contacts)
     const theme = {
         theme : {
