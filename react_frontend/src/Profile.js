@@ -8,16 +8,9 @@ export default function Profile() {
     useEffect(() => {
         axios.get('http://localhost:8000/api/contact/')
             .then(response => {
-                setContacts(response.data)
-                
+                setContacts(response.data)   
             }
-        
-        
-        
         )
-            .catch(error => console.log(error));
-
-            console.log("uahdbjziuhsf")
     }, []);
 
     useEffect(() => {
@@ -28,21 +21,24 @@ export default function Profile() {
         theme : {
             background:'cyan',
             color:'black',
-            padding: '0px 10px 10px', 
+            padding: '0px 10px 10px 10px',
             width: '32rem'
         }
     };
     return (
-    <div style={{display: 'flex', flexDirection:'column', alignItems:'center', gap:'1rem'}}>
-        {contacts.map(contact => (
-            <div className='contacts'style={theme.theme}>
-                <h1 key={contact.id}> {contact.name}'s Info:</h1>
-                <ul>
-                    <li>Phone: {contact.phone}</li>
-                    <li>Email: {contact.email}</li>
-                </ul>
-            </div>
-        ))}
-    </div>    
+    <div style={{background:'#FFFDD0',width:'35rem',height:'55rem', margin:'auto'}}>
+        <h1 style={{color:'black', textAlign:'center'}}>Contact List</h1>
+        <div style={{display: 'flex', flexDirection:'column', alignItems:'center', gap:'1rem'}}>
+            {contacts.map(contact => (
+                <div className='contacts'style={theme.theme}>
+                    <h1 key={contact.id}> {contact.name}'s Info:</h1>
+                    <ul>
+                        <li>Phone: {contact.phone}</li>
+                        <li>Email: {contact.email}</li>
+                    </ul>
+                </div>
+            ))}
+        </div> 
+    </div>   
     );
 }
