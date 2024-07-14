@@ -26,7 +26,7 @@ export default function Profile() {
         }
     };
     return (
-    <div style={{background:'#FFFDD0',width:'35rem',height:'55rem', margin:'auto'}}>
+    <div style={{background:'#FFFDD0',width:'38rem',height:'55rem', margin:'auto'}}>
         <h1 style={{color:'black', textAlign:'center'}}>Contact List</h1>
         <div style={{display: 'flex', flexDirection:'column', alignItems:'center', gap:'1rem'}}>
             {contacts.map(contact => (
